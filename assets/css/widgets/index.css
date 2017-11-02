@@ -1,0 +1,149 @@
+.features-title{
+
+}
+.index-container{
+  position:relative;
+
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-4rem) scale(.8);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes translate-up {
+
+
+  100% {
+    transform: translateY(-45rem);
+
+  }
+}
+
+.animate-pop-in {
+  animation: pop-in .6s cubic-bezier(0, 0.9, 0.3, 1.2) forwards;
+  opacity: 0;
+}
+
+/*
+  Branding-wise you want an image as bhackground in a here-banner that helps
+  you convey the branding message...for example peacocks tend to strut with
+  awesome colors so it makes a nice allegory of the make you look awesome brand
+  message.
+
+  The backgrouond image can also be say your top popular product as well and than
+  you would fine-tune the banner text to state a call-to-action for that product.
+*/
+.hero-wrapper{
+  background: url("../../images/3pmwyw2uery-michael-hacker-1440x753.png") no-repeat center;
+  background-size: cover;
+
+}
+.hero-wrapper:before {
+  background: linear-gradient(to bottom, rgba(0,77,64,0.15), rgba(0,77,64,1.0));
+  content: "";
+  position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.hero-body{
+  font-family: "Roboto Slab", serif;
+  font-weight: bold;
+}
+.hero-banner-subtitle{
+  font-family: "Roboto",sans-serif;
+  font-weight: 500;
+}
+.hero-banner{
+  position:absolute;
+  top: 32%;
+  left: 32%;
+}
+.hero-below-fold-arrow{
+  position:absolute;
+  left: 48%;
+  top: 84%;
+}
+.hero-below-fold-arrow i{
+  color: #00bcd4;
+  animation-delay: 1.3s;
+}
+
+.hero-banner-title {
+  color: #00bcd4;
+  animation-delay: .8s;
+}
+
+.hero-banner-subtitle {
+  color: #00bcd4;
+  animation-delay: 1s;
+}
+
+.header-button {
+  animation-delay: 1.1s;
+  margin-left: 30%;
+}
+/*
+   height is set to 13rem, to account for the extra height since this
+   is absolute positioned, the next element index-container is set to
+   be position relatively.
+
+   A little adjustment from height of 13rem to 13.5 rem as other-wise
+   MS Edge shows a colored artifact in the lower right portion of
+   viewport on the MS Edge desktop versions.
+
+   No, I do not rotate as that would give a horizontal scroller which
+   is somewhat not wanted as the custom way I cusomtize the scrollbar
+   cannot be through JS as that interfers with Materialize ScrollFire.
+   Anyway, there are more creative and pleasing things one can do
+   with just translating up such as creating a shape that reveals
+   itself during the trasnlate up in addition to the rectangle
+   being created by this.
+
+   See, what I mean as far as ctreative-ness? I translate a gradient
+   using alpha up the y-axis.
+
+   
+
+
+*/
+header:after {
+  animation: translate-up .55s .55s cubic-bezier(0, 0.8, 0, 2.9) forwards;
+  background: linear-gradient(to bottom, rgba(0,77,64,1.0), rgba(0,77,64,0.35));
+  content: "";
+  height: 45rem;
+  left: 0%;
+  position: absolute;
+  right: 0%;
+  top: 100%;
+  transform-origin: 0 0;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 601px) {
+  header:after {
+    height: 30rem;
+    top:100%;
+  }
+  @keyframes translate-up {
+    100% {
+      transform: translateY(-32rem);
+    }
+  }
+}
+
+#pageslist li i{
+  color: #00b8d4;
+}
+#extraslist li i{
+  color: #00b8d4;
+}

@@ -1,0 +1,30 @@
+/*
+     Fred Grott
+     http://www.uplabs.com/fred_grott
+     https://twitter.com/fredgrott
+
+     My specialized CSS classes non-specific to any CSS framework
+*/
+
+/*
+   General gist of it is that we want a generalized hero-wrapper css
+   class to that we can do both full-viewport and half-viewport
+   hero banners and at the same time have enough hooks that
+   we can CSS animate it upon page loading, etc.
+
+   hero-body class gets put inside the hero-wrapper and
+   just contains the overall hero content and offers a
+   hook to stylize all of the hero content at once.
+*/
+.hero-wrapper{
+  /* sets viewport height percentage */
+  height: 100vh;
+  position: relative;
+}
+/*
+  More of a semantic clue to those reading the html files of
+  where the hero body text is located.
+*/
+.hero-body{
+
+}

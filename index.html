@@ -1,0 +1,463 @@
+<!-- html5 doctype -->
+<!DOCTYPE html>
+<!--
+    Stoic MultipurposeTwo
+    FRED GROTT
+    http://www.uplabs.com/fred_grott
+    https://twitter.com/fredgrott
+
+    Branding Opportunities:
+                              * CSS animation
+                              * CSS pseudos to decorate buttons,
+                                menu tabs, card tabs, card edges and corners,
+                                etc
+                              * CSS gradients both Scrim for text overlays and
+                                non scrim gradients where applicable
+                              * creative use of backgrounds and
+                                header images in cards
+                              * customizing scroll-bars
+
+
+
+-->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Specifically to get responive-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0 shrink-to-fit=no">
+    <!-- For MS Edge, Google's Chrome and Apple's Safari donot require this-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- REMOVE THIS IN THE FINAL VERSION OF YOUR SITE -->
+    <meta name="robots" content="noindex">
+
+    <!-- No searrch engine uses meta keywords anymore, they just pick-up meta description instead-->
+    <meta name="description" content="StoicMultiPurposeTwo is a multipurpose web template made with Materialize CSS framework">
+    <meta name="author" content="Fred Grott">
+
+    <title>StoicMultipurposeTwo</title>
+
+    <!-- Your favicons generate from realfavicongenerator.net go below-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="manifest.json">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- CSS, CSS framework first than fonts than custom
+           CDN Urls to load this via the cloud are in the docs
+       -->
+    <link href="assets/css/fonts.css"  rel="stylesheet">
+    <link href="assets/css/materialize.css"  rel="stylesheet" media="screen,projection">
+    <link href="assets/css/material-icons.css" rel="stylesheet" >
+    <link href="assets/css/font-awesome.css" rel="stylesheet">
+    <link href="assets/css/fredgrott-materialize.css" rel="stylesheet">
+    <link href="assets/css/fredgrott-basic.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="assets/css/custom.css"  rel="stylesheet">
+    <link href="assets/css/widgets/index.css"  rel="stylesheet">
+
+    <script src="assets/js/jquery-3.2.1.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/init.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/widgets/index.js"></script>
+
+
+    <!-- Schema.org markup goes here -->
+
+    <!-- Open Graph markup goes here -->
+
+    <!-- Twitter Card markup goes here -->
+
+  </head>
+  <body>
+    <!-- hero-wrapper
+
+         Specifically to implement both full-screen and half-screen hero-banners.
+         The Materialize index-banner sample one in their docs was not really
+         that implemented design-wise in a good manner.
+
+         Basic default styling of hero-wrapper is in the fredgrott-basic.css file.
+         Ideally, it also is good to implement Material Design scrim gradients
+         for the background image if used and the footer as those areas are
+         big enough to call out for an implementation of a scrim gradient.
+     -->
+    <div class="hero-wrapper">
+         <header>
+           <!-- navbar-fixed
+
+                Remeber, on non-index pages page-content has to be adjusted
+                down to account for the navbar-fxed setup.
+            -->
+           <div id="my-navbar-fixed" class="navbar-fixed navbar-fixed-custom">
+             <!-- nav, nav-extended-->
+             <nav id="mynavbar" class="nav-extended" role="navigation">
+               <!-- nav-wrapper
+
+                    dont need to separate out container as a separate element as it
+                    has no semantic meaning in this section of html markup
+                 -->
+               <div class="nav-wrapper container">
+                 <!-- dopdown definitions
+
+                      I wanted a subtle matching of the rest of the website UI so
+                      rgba was used for backgrounds...see style.css for details.
+                  -->
+                 <ul id="about" class="dropdown-content">
+                     <li><a href="about-intro.html">Intro</a></li>
+                     <li><a href="about-careers.html">Careers</a></li>
+                     <li><a href="about-contact.html">Contact</a></li>
+                     <li><a href="about-team.html">Team</a></li>
+                 </ul>
+                 <ul id="news" class="dropdown-content">
+                    <li><a href="news-blog.html">Blog</a></li>
+                    <li><a href="news-events.html">Events</a></li>
+                    <li><a href="news-newsletter.html">Newsletter</a></li>
+                 </ul>
+                 <ul id="services" class="dropdown-content">
+                    <li><a href="services-intro.html">Intro</a></li>
+                    <li><a href="services-clientgallery.html">Clients</a></li>
+                    <li><a href="services-packages.html">Packages</a></li>
+                 </ul>
+                 <ul id="ecom" class="dropdown-content">
+                    <li><a href="ecom-ecart.html">eCart</a></li>
+                    <li><a href="ecom-invoice.html">Invoice</a></li>
+                    <li><a href="ecom-orders.html">Orders</a></li>
+                    <li><a href="ecom-payment-checkout.html">Payment</a></li>
+                    <li><a href="ecom-products.html">Products</a></li>
+                 </ul>
+                 <ul id="docs" class="dropdown-content">
+                    <li><a href="docs-intro.html">Intro</a></li>
+                    <li><a href="docs-credits.html">Credits</a></li>
+                    <li><a href="docs-features.html">Features</a></li>
+                    <li><a href="docs-pages.html">Pages</a></li>
+                    <li><a href="docs-setup.html">SetUp</a></li>
+                 </ul>
+                 <!-- These two dropdown-content things you are
+                      programatically changing the list item content upon login and
+                      ecart states
+                   -->
+                 <ul id='ecart' class="dropdown-content my-dropdowncontent-ecart">
+                    <div class="shopping-cart-header">
+                         &nbsp;&nbsp;<i class="fa fa-shopping-cart"></i><span class="">4</span> <span class="">&nbsp;&nbsp;Total:</span>
+                         <span class=""><b>$2,229.97</b></span>
+                    </div>
+                    <li><a href="ecom-ecart.html" class="" >2 Bikes</a></li>
+                    <li><a href="ecom-ecart.html" class="">2 scates</a></li>
+                    <li><a href="ecom-ecart.html" class='btn'><i class="fa  fa-shopping-cart"></i><span class="">Edit</span></a></li>
+                    <li><a href="ecom-payment-checkout.html" class='btn'><i class="fa  fa-cc "></i><span class="">Checkout</span></a></li>
+                 </ul>
+                 <ul id='login' class="dropdown-content my-dropdowncontent-login">
+                       <li><a href="logout.html" class="">LogOut</a></li>
+                       <!-- if state is not loggedin than this one
+                            and programmically remove the other item from the login list
+                       <li><a href="login.html">LogIn</a></li> -->
+                </ul>
+
+
+
+
+
+                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons mobile-menu-button">menu</i></a>
+                 <ul class="navbar-top-menu hide-on-med-and-down">
+                        <li><a href="index.html"><img src="assets/images/stoicdesignlogotwo.png"></a></li>
+                        <li>&nbsp;&nbsp;&nbsp;Suite 12, 56 Monon Street, Westville, IN 46391 USA</li>
+                        <!-- href'ing the phone so we can use the tel: breaks things, so not using at the moment in
+                             this prticular space of the website -->
+                        <li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1-877-666-6767</li>
+                 </ul>
+                 <!-- logo for mobile
+
+                      Kept aligned center so that we have enough room for the signincart
+                      menu on mobile
+                 -->
+                 <a href="index.html" class="brand-logo hide-on-large-only center"><img src="assets/images/stoicdesignlogotwo.png"></a>
+                 <ul class="signincart">
+                     <!-- Not sure why a font-awesome icon goofs up when we add more than one here so
+                          using lock_outline and lock_open from material-icons-->
+                     <li><a href="#!" class="dropdown-button navbar-login-dropdown-button" data-beloworigin="true" data-hover="true" href="#!" data-activates="login"><i class="fa  fa-lock"></i></a></li>
+                     <li><a href="#!" class="dropdown-button navbar-cart-dropdown-button" data-beloworigin="true" data-hover="true" href="#!" data-activates="ecart"><i class="fa  fa-shopping-cart"></i>4</a></li>
+                 </ul>
+                 <!-- ./nav-wrapper -->
+               </div>
+               <!-- Materialize docs are wrong, nav-content for nav-extended needs to be outside
+                    of the nav-wraper tags
+                 -->
+               <!-- nav-content -->
+               <div class="nav-content container">
+                 <!-- hack-ish solution to clear-out as the firm logo is a different height than the navbaqr text of the
+                      first line -->
+                 <br class="hide-on-med-and-down"/>
+                 <!-- bottom-mwenu
+
+                      See the style.css as I fix some things  to
+                      tiddy up the nav-content portion
+                 -->
+                 <ul class="navbar-bottom-menu hide-on-med-and-down ">
+                   <!-- Materialize tabs dont allow dropdowns so I made something to work,
+                        see style.css for details
+
+                        Also, remember that one can set the li a active even with dropdown buttons thus
+                        it puts desktop on par with what we do on mobile to indicate what
+                        section of the website the website viewer is in.
+                        -->
+                        <li><a class="dropdown-button navbar-bottom-menu-tab" data-beloworigin="true" data-hover="true" href="#!" data-activates="about">About&nbsp;<i class="fa fa-arrow-circle-o-down"></i></a></li>
+                        <li><a class="dropdown-button navbar-bottom-menu-tab" data-beloworigin="true" data-hover="true" href="#!" data-activates="news">News&nbsp;<i class="fa fa-arrow-circle-o-down"></i></a></li>
+                        <li><a class="dropdown-button navbar-bottom-menu-tab" data-beloworigin="true" data-hover="true" href="#!" data-activates="services">Services&nbsp;<i class="fa fa-arrow-circle-o-down"></i></a></li>
+                        <li><a class="dropdown-button navbar-bottom-menu-tab" data-beloworigin="true" data-hover="true" href="#!" data-activates="ecom">eCom&nbsp;<i class="fa fa-arrow-circle-o-down"></i></a></li>
+                        <li><a class="dropdown-button navbar-bottom-menu-tab" data-beloworigin="true" data-hover="true" href="#!" data-activates="docs">Docs&nbsp;<i class="fa fa-arrow-circle-o-down"></i></a></li>
+                   <!-- ./navbar-bottom-menu -->
+                 </ul>
+                 <!--./nav-content -->
+               </div>
+               <!-- ./nav, nav-extended -->
+             </nav>
+           <!-- ./navbar-fixed -->
+           </div>
+           <!-- slide-out menu definition
+
+                needs to be outside of the navbar-fixed div tags to work properly
+           -->
+           <!-- side-nav -->
+           <ul id="mobile-demo" class="side-nav my-z-depth-1 side-nav-custom">
+             <!-- ./side-nav -->
+           </ul>
+         </header>
+         <!-- hero-body
+
+              Container is optional in this hero-body depending
+              upon what your want to accomplish
+
+              You animation choice should be something that calls attention to
+              the branding message and call-to-action. It helps if the animation,
+              branding message, background image, and call-to-action all work
+              togther-in-concert...this is but a simple example of that type
+              of integration.
+          -->
+         <div class="hero-body">
+            <div class="container">
+              <section class="header-content">
+                 <div class="hero-banner">
+                  <h1 class="hero-banner-title center animate-pop-in">Stoic Design</h1>
+                  <h4 class="hero-banner-subtitle center animate-pop-in">Let Us, Strut Your Awesomeness</h4>
+                  <a href="#!" class="btn header-button  animate-pop-in pulse">ContactUs</a>
+                </div>
+                <div class="hero-below-fold-arrow">
+                  <!-- See what I mean about wrestling Materialize to its knees?
+                       Once you know the itnernals, you can come up with some awesoem hacks!
+                   -->
+                  <i class="fa fa-3x fa-angle-double-down animate-pop-in pulse"></i>
+                </div>
+              </section>
+            </div>
+         <!-- ./hero-body -->
+         </div>
+         <!-- ./hero-wrapper -->
+         </div>
+    <main>
+      <!-- I need to adjust/set the postion property so that the index content
+           is not obscured by the animated scrolling down hint I have implemented,
+           see index.css for that and the animation magic
+         -->
+      <div class="container index-container">
+        <!-- promo -->
+        <section id="promo">
+          <div class="row">
+            <div class="col l4 s12">
+              <div class="card-panel my-z-depth-1">
+                <i  class="fa fa-2x fa-html5"></i><i  class="fa fa-2x fa-css3 "></i>
+                <div class="card-content">
+                  <h4 class="card-header">All Browsers</h4>
+                  <p>Standards compliant code that works in all browsers and will work in future browser versions.</p>
+                </div>
+              </div>
+             </div>
+             <div class="col l4 s12 ">
+              <div class="card-panel my-z-depth-1 ">
+                <i class=" fa fa-2x fa-desktop"></i><i class=" fa fa-2x fa-mobile"></i><i class=" fa fa-2x fa-tablet"></i><i class="fa fa-2x fa-tv"></i>
+                <div class="card-content">
+                  <h4 class="card-header">UX</h4>
+                  <p class="">Delivering exciting and interesting web-interfaces in both desktop and mobile.</p>
+                </div>
+              </div>
+             </div>
+             <div class="col l4 s12">
+              <div class="card-panel my-z-depth-1">
+                <i class="fa fa-2x fa-bell-o"></i><i class="fa fa-2x fa-diamond"></i>
+                <div class="card-content">
+                  <h4 class="card-header">Flair</h4>
+                  <p>Adding that extra flair, that entices the viewer to keep reading and exploring your site.</p>
+                </div>
+              </div>
+           </div>
+          </div>
+          <!-- ./promo -->
+        </section>
+        <section >
+          <div class="row" id="features">
+            <h3 id="featurestitle" class="scale-transition scale-out center section-title features-title">Features</h3>
+            <div class="col l6 s12 ">
+              <div class="card-panel transparent  z-depth-0">
+                <div class="card-content">
+                  <h4 class="card-header">Pages</h4>
+                  <p class="">Pages for all your site needs including:</p>
+                  <ul id="pageslist" class="">
+                    <li><i class="fa fa-check-circle-o "></i>About Section Pages, including careers and team</li>
+                    <li><i class="fa fa-check-circle-o "></i>News Section Pages, including events and newsletter</li>
+                    <li><i class="fa fa-check-circle-o "></i>Services Section Pages, including clients and packages</li>
+                    <li><i class="fa fa-check-circle-o "></i>Docs explainging how to use this web template package</li>
+                    <li><i class="fa fa-check-circle-o "></i>Pages such as 404, TOS, and privacy</li>
+                    <li><i class="fa fa-check-circle-o "></i>Sample homepage showing correct use of hero banners and other call-to-action secrets</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col l6 s12 ">
+              <div class="card-panel transparent z-depth-0 ">
+                <div class="card-content">
+                  <h4 class="card-header">Extras</h4>
+                  <p>Because who does not need extras?</p>
+                  <ul id="extraslist" class="">
+                    <li><i class="fa fa-check-circle-o "></i>Landing Pages, incuding book, event, newsletter,  and mobile app</li>
+                    <li><i class="fa fa-check-circle-o "></i>Font Awesome icons</li>
+                    <li><i class="fa fa-check-circle-o "></i>My CSS helper classes, including container-fluid for the bleed-to-the-edge effect for your website content</li>
+                    <li><i class="fa fa-check-circle-o "></i>Extra comments in CSS, JS, and HTML explaining why certain things are set a certain way and explanations of work-around code</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="designimpl">
+          <div class="row">
+            <h3 id="designimplementation" class="scale-transition scale-out center section-title">Design Implementation</h3>
+            <div class="col l6 s12">
+             <div class="card-panel my-z-depth-1">
+               <div class="card-content">
+                 <h4 class="card-header">Fonts</h4>
+                 <p>The font choices needed to relfect the balance between corporate sites and easy of readability while at the same time reflect the swiss international(mod-ish) design style. Thus, the following fonts were chosen:</p>
+                 <ul id="fontslist">
+                   <li><h4>Roboto</h4></li>
+                   <li class="roboto-slab-font"><h4>Roboto Slab</h4></li>
+                   <li class="roboto-mono-font"><h4>Roboto Mono</h4></li>
+                   <li class="roboto-condensed-font"><h4>Roboto Condensed</h4></li>
+                 </ul>
+               </div>
+             </div>
+           </div>
+           <div class="col l6 s12">
+             <div class="card-panel my-z-depth-1">
+               <div class="card-content">
+                 <h4 class="card-header">Trade-Offs</h4>
+                 <p>A choice was made to use those design items on desktop, that while were not available on mobile, could be implemented in a different way on mobile. Thus, getting as close as possible to delivering fully equal viewing experiences on both desktop and mobile.</p>
+
+                 <p>Sometimes, that meant avoiding the choice of a verrtical slider and implementing a better designed horizontal slider design on desktop in order to bring the same viewing experience to mobile. Soemtimes, it meant avoiding a choice of a vertically offset card overlay as a section title and section description on desktop in order to give the same viewing expereience to both desktop and mobile on viewing that section title and section description.</p>
+               </div>
+             </div>
+           </div>
+          </div>
+        </section>
+        <!-- designvision -->
+        <section id="designvisionimpl">
+          <div class="row">
+            <h3 id="designvision" class="scale-transition scale-out center section-title">Design Vision</h3>
+            <div class="col l6 s12  ">
+             <div class="card-panel my-z-depth-1 ">
+               <div class="card-content">
+                 <h4 class="card-header">Modernism</h4>
+                 <p>The Modernism movement is not just something that makes you squint hard at a Musuem painting trying to determine what meaning the painter meant. It's a human ambition to derive a new meaning that does not rely upon un-factual inventions but human mind  inventions to understand the factual universe.</p>
+
+                 <p>In a blink of an eye, the web-and-internet implementation became the new modernism movement.The inter-connective-ness of the different tribes and that freedom to connect, relate, and improve knowledge becoem the extension of modernims itself. One of the ways I can visualize that for the viewer is not limiting web links to just ones for the website itself.</p>
+               </div>
+             </div>
+           </div>
+           <div class="col l6 s12 ">
+             <div class="card-panel my-z-depth-1 ">
+               <div class="card-content">
+                 <h4 class="card-header">The Web Movement, Successor to Modernism</h4>
+                 <p>Rather than the un-factual one-family tribe against all others, what does a group of inter-connected tribes look like as a human movement? Yes, one can say the web itself is that movement but how does one convey that visually in the web-interface set of implementations?</p>
+
+                 <p>Transitions help me visuallize for the website viewer the impression that the website and the web-internet-interface is breathing-living enitity that, unlike the ships in aliens, travels with us on our journey to improve the human race and the universe. My design vision goal is to show that we have this living and breathing organisms  of web that ravels with us to improve human-kind and the universe.</p>
+               </div>
+             </div>
+           </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <!--footer -->
+    <footer id="pagefooter" class="page-footer   page-footer-custom">
+       <div class="container">
+        <div class="row">
+          <div class="col l3 m6 s12">
+                 <!-- in small mobile devices this is the first bit of footer content that
+                      appears so let's have the small mobile device viewer see the
+                      firm logo first -->
+                 <h5 class="footer-col-header">Address</h5>
+                 <h5 class=""><img src="assets/images/stoicdesignlogotwo.png"></h5>               <!-- Remember, to repeat your company mailing address info in your schema.org declaration in the html head of your
+                      website. -->
+                 <h6 class="">Stoic  Design<br/>
+                                        Suite 12<br/>
+                                        56 Monon Street<br/>
+                                        Westville, IN 46391<br/>
+                                        USA</h6>
+                                        <br/>
+                                        <br/>
+          </div>
+          <div class="col l3 m6 s12">
+                 <h5 class=" footer-col-header">Contact</h5>
+                 <ul class="footer-col-list">
+                   <li><a class="footer-col-list-item" href="#!"><i class="fa fa-envelope "></i>&nbsp;&nbsp;sales@stoicdesign.io</a></li>
+                   <li><a class="footer-col-list-item" href="#!"><i class="fa fa-envelope "></i>&nbsp;&nbsp;careers@stoicdesign.io</a></li>
+                   <li><a class="footer-col-list-item" href="#!"><i class="fa fa-skype "></i>&nbsp;&nbsp;biz.stoicdesign</a></li>
+                   <li><a class="footer-col-list-item" href="#!"><i class="fa fa-slack "></i>&nbsp;&nbsp;stoicdesign</a></li>
+                   <li><a class="footer-col-list-item" href="tel:1-877-456-4567"><i class="fa fa-phone "></i>&nbsp;&nbsp;&nbsp;1-877-666-6767</a></li>
+                 </ul>
+
+          </div>
+          <div class="col l3 m6 s12">
+                 <!-- Not to repeat navigation, but to spark a reminder of certain
+                      website entry points that the viewer may want to visit once
+                      they have scanned down all the way to the footer
+                    -->
+                 <h5 class="footer-col-header">Navigation</h5>
+                 <ul class="footer-col-list">
+                   <li><a class="footer-col-list-item" href="about-intro.html"><i class="fa fa-info "></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;About</a></li>
+                   <li><a class="footer-col-list-item" href="about-careers.html"><i class="fa fa-users "></i>&nbsp;&nbsp;Careers</a></li>
+                   <li><a class="footer-col-list-item" href="news-newsletter.html"><i class="fa fa-newspaper-o "></i>&nbsp;&nbsp;Newsletter</a></li>
+                   <li><a class="footer-col-list-item" href="loginorsignup.html"><i class="fa fa-bell-o "></i>&nbsp;&nbsp;&nbsp;SignUp</a></li>
+                   <li><a class="footer-col-list-item" href="tos.html"><i class="fa fa-handshake-o "></i>&nbsp;Terms Of Service</a></li>
+                   <li><a class="footer-col-list-item" href="privacy.html"><i class="fa fa-support "></i>&nbsp;&nbsp;&nbsp;Privacy</a></li>
+                   <li><a class="footer-col-list-item" href="sitemap.html"><i class="fa fa-sitemap "></i>&nbsp;&nbsp;&nbsp;SiteMap</a></li>
+                 </ul>
+        </div>
+        <div class="col l3 m6 s12">
+                 <h5 class=" footer-col-header">Connect</h5>
+                 <!-- its tempting to use icons here, better to use both to balance with
+                      what I did in the other footer column -->
+                 <ul class="footer-col-list">
+
+                   <li><a  href="#!" target="_blank" class="footer-col-list-item"><i class="fa fa-facebook-square"></i>&nbsp;Facebook</a></li>
+                   <li><a  href="#!" target="_blank" class="footer-col-list-item"><i class="fa fa-google-plus-square "></i>&nbsp;Google+</a></li>
+                   <li><a  href="#!" target="_blank" class="footer-col-list-item"><i class="fa fa-linkedin-square "></i>&nbsp;LinkedIn</a></li>
+                   <li><a  href="#!" target="_blank" class="footer-col-list-item"><i class="fa fa-twitter-square "></i>&nbsp;Twitter</a></li>
+                   <li><a  href="#!" target="_blank" class="footer-col-list-item"><i class="fa fa-youtube-square "></i>&nbsp;YouTube</a></li>
+                 </ul>
+
+        </div>
+      </div>
+    </div>
+
+      <!-- footer-copyright -->
+           <div class="footer-copyright">
+             <div class="container">
+             &copy;2017 Copyright, allrights reserved made by <a href="http://www.uplabs.com/fred_grott" class=""><b>Fred Grott</b></a> with <a class="" href="http://www.materializecss.com"><b>Materialize CSS Framework</b></a>, <a href="atom.io" class=""><b>Atom</b></a>, and some Material Design flair.
+
+           </div>
+             <!-- /.footer-copyright -->
+           </div>
+     <!-- ./footer -->
+    </footer>
+  </body>
+</html>
